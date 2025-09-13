@@ -10,8 +10,10 @@ namespace LMS.Models.Entities
         public required string Surname { get; set; }
 
         public required string Email { set; get; }
-       
+
         public required string Phone { set; get; }
+        //Navigation Property
+        //public ICollection<Loan> Loan { get; set; }
     }
 
     public class AddClientDTO
