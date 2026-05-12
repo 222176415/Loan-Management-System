@@ -1,0 +1,26 @@
+services:
+  db:
+    image: ://microsoft.com
+    container_name: lms-sql-db
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=YourSecurePassword123!
+    ports:
+      - "1433:1433"
+
+  api:
+    image: lms-api
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: lms-api-service
+    ports:
+      - "5000:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DbConnection=Server=db;Database=LMSDB;User Id=sa;Password=YourSecurePassword123!;TrustServerCertificate=True;
+      - Jwt__Key=PCuLYf7bWtAOvXejfHO5IuIhmWCMyzr7Bz3RKHuYf1d0VChhRIAbSvksszyuJx6H+VHxwp2PosDOgVF2uv3YXg==
+      - Jwt__Issuer=LoanManagementSystem
+      - Jwt__Audience=LoanManagementSystemUsers
+    depends_on:
+      - db
