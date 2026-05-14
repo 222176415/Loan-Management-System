@@ -123,3 +123,8 @@ docker-compose up --build
 ### WebSockets Hub Access Paths
 - `/hubs/notifications` - Broadcasts generalized operational shifts to active staff nodes.
 - `/hubs/audit` - Feeds a highly responsive security dashboard monitor with immediate `ActivityLog` and `UserLoginLog` data rows right after they commit to the core tables.
+  AND MORE.
+
+
+
+  PLEASE  NOTE: if youre having issues with running the project unzip the LMS folder thats the back-up.
