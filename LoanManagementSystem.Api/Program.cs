@@ -136,12 +136,14 @@ using (var scope = app.Services.CreateScope())
     var services = scope.ServiceProvider;
     try
     {
+        Console.WriteLine("---- Creating scope for database migration...");
         var context = services.GetRequiredService<ApplicationDbContext>();
         Console.WriteLine("System: Checking pending migrations...");
-        await context.Database.MigrateAsync(); 
-        
+        await context.Database.MigrateAsync();
+
+        Console.WriteLine("---Seeding database...");
         await DatabaseSeeder.SeedAsync(context);
-        Console.WriteLine("Database seeding completed successfully.");
+        Console.WriteLine("-- Database seeding completed successfully.");
     }
     catch (Exception ex)
     {
@@ -149,4 +151,5 @@ using (var scope = app.Services.CreateScope())
     }
 }
 
+Console.WriteLine("Step 18: Application is starting – running...");
 app.Run();
