@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net9.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+	<ItemGroup>
+		<!-- Core EF and SQL Server Support -->
+		<PackageReference Include="ClosedXML" Version="0.105.0" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.0" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.0" />
+
+		<!-- Fix the Downgrade Error by pointing to the higher version or removing the direct ref -->
+		<PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.3.0" />
+
+		<!-- SignalR and Configuration -->
+		<PackageReference Include="Microsoft.AspNetCore.SignalR" Version="1.1.0" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="9.0.0" />
+	</ItemGroup>
+
+
+	<ItemGroup>
+		<!-- Layer References -->
+		<ProjectReference Include="..\LoanManagementSystem.Application\LoanManagementSystem.Application.csproj" />
+		<ProjectReference Include="..\LoanManagementSystem.Domain\LoanManagementSystem.Domain.csproj" />
+	</ItemGroup>
+
+</Project>

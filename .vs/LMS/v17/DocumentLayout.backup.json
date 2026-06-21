@@ -1,0 +1,335 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ITSADT30\\Documents\\folder\\LMS\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ITSADT30\\Documents\\folder\\LMS\\LoanManagementSystem.Domain\\Entities\\Loan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:LoanManagementSystem.Domain\\Entities\\Loan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ITSADT30\\Documents\\folder\\LMS\\LoanManagementSystem.Domain\\Enums\\LoanStatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:LoanManagementSystem.Domain\\Enums\\LoanStatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ITSADT30\\Documents\\folder\\LMS\\LoanManagementSystem.Domain\\Entities\\ActivityLog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:LoanManagementSystem.Domain\\Entities\\ActivityLog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ITSADT30\\Documents\\folder\\LMS\\LoanManagementSystem.Domain\\Entities\\Client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:LoanManagementSystem.Domain\\Entities\\Client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ITSADT30\\Documents\\folder\\LMS\\LoanManagementSystem.Domain\\Entities\\Organization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:LoanManagementSystem.Domain\\Entities\\Organization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ITSADT30\\Documents\\folder\\LMS\\LoanManagementSystem.Domain\\Entities\\Payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:LoanManagementSystem.Domain\\Entities\\Payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ITSADT30\\Documents\\folder\\LMS\\LoanManagementSystem.Domain\\Entities\\UserLoginLog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:LoanManagementSystem.Domain\\Entities\\UserLoginLog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ITSADT30\\Documents\\folder\\LMS\\LoanManagementSystem.Api\\Controllers\\AuthController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:LoanManagementSystem.Api\\Controllers\\AuthController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ITSADT30\\Documents\\folder\\LMS\\LoanManagementSystem.Api\\LoanManagementSystem.Api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:LoanManagementSystem.Api\\LoanManagementSystem.Api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ITSADT30\\Documents\\folder\\LMS\\LoanManagementSystem.Domain\\LoanManagementSystem.Domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:LoanManagementSystem.Domain\\LoanManagementSystem.Domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ITSADT30\\Documents\\folder\\LMS\\LoanManagementSystem.Application\\LoanManagementSystem.Application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:LoanManagementSystem.Application\\LoanManagementSystem.Application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ITSADT30\\Documents\\folder\\LMS\\LoanManagementSystem.Infrastructure\\LoanManagementSystem.Infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:LoanManagementSystem.Infrastructure\\LoanManagementSystem.Infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ITSADT30\\Documents\\Power BI Desktop\\Tech\\LMS\\LoanManagementSystem.Domain\\Class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ITSADT30\\Documents\\folder\\LMS\\LoanManagementSystem.Api\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:LoanManagementSystem.Api\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ITSADT30\\Documents\\folder\\LMS\\LoanManagementSystem.Api\\appsettings.Development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:LoanManagementSystem.Api\\appsettings.Development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ITSADT30\\Documents\\folder\\LMS\\LoanManagementSystem.Api\\LoanManagementSystem.Api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:LoanManagementSystem.Api\\LoanManagementSystem.Api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ITSADT30\\Documents\\folder\\LMS\\LoanManagementSystem.Api\\Properties\\launchSettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:LoanManagementSystem.Api\\Properties\\launchSettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ITSADT30\\Documents\\folder\\LMS\\LoanManagementSystem.Api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:LoanManagementSystem.Api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 2299,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:254354193:0:{71f361cc-493f-47c0-923f-f2570b6f8618}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserLoginLog.cs",
+              "DocumentMoniker": "C:\\Users\\ITSADT30\\Documents\\folder\\LMS\\LoanManagementSystem.Domain\\Entities\\UserLoginLog.cs",
+              "RelativeDocumentMoniker": "LoanManagementSystem.Domain\\Entities\\UserLoginLog.cs",
+              "ToolTip": "C:\\Users\\ITSADT30\\Documents\\folder\\LMS\\LoanManagementSystem.Domain\\Entities\\UserLoginLog.cs",
+              "RelativeToolTip": "LoanManagementSystem.Domain\\Entities\\UserLoginLog.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T12:45:55.619Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Payment.cs",
+              "DocumentMoniker": "C:\\Users\\ITSADT30\\Documents\\folder\\LMS\\LoanManagementSystem.Domain\\Entities\\Payment.cs",
+              "RelativeDocumentMoniker": "LoanManagementSystem.Domain\\Entities\\Payment.cs",
+              "ToolTip": "C:\\Users\\ITSADT30\\Documents\\folder\\LMS\\LoanManagementSystem.Domain\\Entities\\Payment.cs",
+              "RelativeToolTip": "LoanManagementSystem.Domain\\Entities\\Payment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T12:45:51.876Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Organization.cs",
+              "DocumentMoniker": "C:\\Users\\ITSADT30\\Documents\\folder\\LMS\\LoanManagementSystem.Domain\\Entities\\Organization.cs",
+              "RelativeDocumentMoniker": "LoanManagementSystem.Domain\\Entities\\Organization.cs",
+              "ToolTip": "C:\\Users\\ITSADT30\\Documents\\folder\\LMS\\LoanManagementSystem.Domain\\Entities\\Organization.cs",
+              "RelativeToolTip": "LoanManagementSystem.Domain\\Entities\\Organization.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T12:45:46.574Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Client.cs",
+              "DocumentMoniker": "C:\\Users\\ITSADT30\\Documents\\folder\\LMS\\LoanManagementSystem.Domain\\Entities\\Client.cs",
+              "RelativeDocumentMoniker": "LoanManagementSystem.Domain\\Entities\\Client.cs",
+              "ToolTip": "C:\\Users\\ITSADT30\\Documents\\folder\\LMS\\LoanManagementSystem.Domain\\Entities\\Client.cs",
+              "RelativeToolTip": "LoanManagementSystem.Domain\\Entities\\Client.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T12:45:05.775Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ActivityLog.cs",
+              "DocumentMoniker": "C:\\Users\\ITSADT30\\Documents\\folder\\LMS\\LoanManagementSystem.Domain\\Entities\\ActivityLog.cs",
+              "RelativeDocumentMoniker": "LoanManagementSystem.Domain\\Entities\\ActivityLog.cs",
+              "ToolTip": "C:\\Users\\ITSADT30\\Documents\\folder\\LMS\\LoanManagementSystem.Domain\\Entities\\ActivityLog.cs",
+              "RelativeToolTip": "LoanManagementSystem.Domain\\Entities\\ActivityLog.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T12:44:49.615Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LoanStatus.cs",
+              "DocumentMoniker": "C:\\Users\\ITSADT30\\Documents\\folder\\LMS\\LoanManagementSystem.Domain\\Enums\\LoanStatus.cs",
+              "RelativeDocumentMoniker": "LoanManagementSystem.Domain\\Enums\\LoanStatus.cs",
+              "ToolTip": "C:\\Users\\ITSADT30\\Documents\\folder\\LMS\\LoanManagementSystem.Domain\\Enums\\LoanStatus.cs",
+              "RelativeToolTip": "LoanManagementSystem.Domain\\Enums\\LoanStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T12:43:06.94Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Loan.cs",
+              "DocumentMoniker": "C:\\Users\\ITSADT30\\Documents\\folder\\LMS\\LoanManagementSystem.Domain\\Entities\\Loan.cs",
+              "RelativeDocumentMoniker": "LoanManagementSystem.Domain\\Entities\\Loan.cs",
+              "ToolTip": "C:\\Users\\ITSADT30\\Documents\\folder\\LMS\\LoanManagementSystem.Domain\\Entities\\Loan.cs",
+              "RelativeToolTip": "LoanManagementSystem.Domain\\Entities\\Loan.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T12:41:43.4Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\ITSADT30\\Documents\\folder\\LMS\\LoanManagementSystem.Api\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "LoanManagementSystem.Api\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\ITSADT30\\Documents\\folder\\LMS\\LoanManagementSystem.Api\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "LoanManagementSystem.Api\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAC0AAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T12:41:03.226Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\ITSADT30\\Documents\\Power BI Desktop\\Tech\\LMS\\LoanManagementSystem.Domain\\Class1.cs",
+              "RelativeDocumentMoniker": "..\\..\\Power BI Desktop\\Tech\\LMS\\LoanManagementSystem.Domain\\Class1.cs",
+              "ToolTip": "C:\\Users\\ITSADT30\\Documents\\Power BI Desktop\\Tech\\LMS\\LoanManagementSystem.Domain\\Class1.cs",
+              "RelativeToolTip": "..\\..\\Power BI Desktop\\Tech\\LMS\\LoanManagementSystem.Domain\\Class1.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-04T07:29:44.552Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "LoanManagementSystem.Infrastructure.csproj",
+              "DocumentMoniker": "C:\\Users\\ITSADT30\\Documents\\folder\\LMS\\LoanManagementSystem.Infrastructure\\LoanManagementSystem.Infrastructure.csproj",
+              "RelativeDocumentMoniker": "LoanManagementSystem.Infrastructure\\LoanManagementSystem.Infrastructure.csproj",
+              "ToolTip": "C:\\Users\\ITSADT30\\Documents\\folder\\LMS\\LoanManagementSystem.Infrastructure\\LoanManagementSystem.Infrastructure.csproj",
+              "RelativeToolTip": "LoanManagementSystem.Infrastructure\\LoanManagementSystem.Infrastructure.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-05-04T07:28:21.533Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "LoanManagementSystem.Application.csproj",
+              "DocumentMoniker": "C:\\Users\\ITSADT30\\Documents\\folder\\LMS\\LoanManagementSystem.Application\\LoanManagementSystem.Application.csproj",
+              "RelativeDocumentMoniker": "LoanManagementSystem.Application\\LoanManagementSystem.Application.csproj",
+              "ToolTip": "C:\\Users\\ITSADT30\\Documents\\folder\\LMS\\LoanManagementSystem.Application\\LoanManagementSystem.Application.csproj",
+              "RelativeToolTip": "LoanManagementSystem.Application\\LoanManagementSystem.Application.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-05-04T07:27:26.484Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "LoanManagementSystem.Api.csproj",
+              "DocumentMoniker": "C:\\Users\\ITSADT30\\Documents\\folder\\LMS\\LoanManagementSystem.Api\\LoanManagementSystem.Api.csproj",
+              "RelativeDocumentMoniker": "LoanManagementSystem.Api\\LoanManagementSystem.Api.csproj",
+              "ToolTip": "C:\\Users\\ITSADT30\\Documents\\folder\\LMS\\LoanManagementSystem.Api\\LoanManagementSystem.Api.csproj",
+              "RelativeToolTip": "LoanManagementSystem.Api\\LoanManagementSystem.Api.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-05-04T07:26:06.46Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "LoanManagementSystem.Domain.csproj",
+              "DocumentMoniker": "C:\\Users\\ITSADT30\\Documents\\folder\\LMS\\LoanManagementSystem.Domain\\LoanManagementSystem.Domain.csproj",
+              "RelativeDocumentMoniker": "LoanManagementSystem.Domain\\LoanManagementSystem.Domain.csproj",
+              "ToolTip": "C:\\Users\\ITSADT30\\Documents\\folder\\LMS\\LoanManagementSystem.Domain\\LoanManagementSystem.Domain.csproj",
+              "RelativeToolTip": "LoanManagementSystem.Domain\\LoanManagementSystem.Domain.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-05-04T07:25:56.56Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\ITSADT30\\Documents\\folder\\LMS\\LoanManagementSystem.Api\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "LoanManagementSystem.Api\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\ITSADT30\\Documents\\folder\\LMS\\LoanManagementSystem.Api\\appsettings.Development.json",
+              "RelativeToolTip": "LoanManagementSystem.Api\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-04T07:22:44.265Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ITSADT30\\Documents\\folder\\LMS\\LoanManagementSystem.Api\\Program.cs",
+              "RelativeDocumentMoniker": "LoanManagementSystem.Api\\Program.cs",
+              "ToolTip": "C:\\Users\\ITSADT30\\Documents\\folder\\LMS\\LoanManagementSystem.Api\\Program.cs",
+              "RelativeToolTip": "LoanManagementSystem.Api\\Program.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABIAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-04T06:55:10.119Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\ITSADT30\\Documents\\folder\\LMS\\LoanManagementSystem.Api\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "LoanManagementSystem.Api\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\ITSADT30\\Documents\\folder\\LMS\\LoanManagementSystem.Api\\Properties\\launchSettings.json",
+              "RelativeToolTip": "LoanManagementSystem.Api\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-04T06:50:44.088Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "LoanManagementSystem.Api.http",
+              "DocumentMoniker": "C:\\Users\\ITSADT30\\Documents\\folder\\LMS\\LoanManagementSystem.Api\\LoanManagementSystem.Api.http",
+              "RelativeDocumentMoniker": "LoanManagementSystem.Api\\LoanManagementSystem.Api.http",
+              "ToolTip": "C:\\Users\\ITSADT30\\Documents\\folder\\LMS\\LoanManagementSystem.Api\\LoanManagementSystem.Api.http",
+              "RelativeToolTip": "LoanManagementSystem.Api\\LoanManagementSystem.Api.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2026-05-04T06:50:09.506Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\ITSADT30\\Documents\\folder\\LMS\\LoanManagementSystem.Api\\appsettings.json",
+              "RelativeDocumentMoniker": "LoanManagementSystem.Api\\appsettings.json",
+              "ToolTip": "C:\\Users\\ITSADT30\\Documents\\folder\\LMS\\LoanManagementSystem.Api\\appsettings.json",
+              "RelativeToolTip": "LoanManagementSystem.Api\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-04T06:50:06.397Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

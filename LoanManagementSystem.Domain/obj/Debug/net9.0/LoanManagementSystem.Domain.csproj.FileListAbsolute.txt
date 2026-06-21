@@ -1,0 +1,11 @@
+C:\Users\ITSADT30\Documents\folder\LMS\LoanManagementSystem.Domain\obj\Debug\net9.0\LoanManagementSystem.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ITSADT30\Documents\folder\LMS\LoanManagementSystem.Domain\obj\Debug\net9.0\LoanManagementSystem.Domain.AssemblyInfoInputs.cache
+C:\Users\ITSADT30\Documents\folder\LMS\LoanManagementSystem.Domain\obj\Debug\net9.0\LoanManagementSystem.Domain.AssemblyInfo.cs
+C:\Users\ITSADT30\Documents\folder\LMS\LoanManagementSystem.Domain\obj\Debug\net9.0\LoanManagementSystem.Domain.csproj.CoreCompileInputs.cache
+C:\Users\ITSADT30\Documents\folder\LMS\LoanManagementSystem.Domain\bin\Debug\net9.0\LoanManagementSystem.Domain.deps.json
+C:\Users\ITSADT30\Documents\folder\LMS\LoanManagementSystem.Domain\bin\Debug\net9.0\LoanManagementSystem.Domain.dll
+C:\Users\ITSADT30\Documents\folder\LMS\LoanManagementSystem.Domain\bin\Debug\net9.0\LoanManagementSystem.Domain.pdb
+C:\Users\ITSADT30\Documents\folder\LMS\LoanManagementSystem.Domain\obj\Debug\net9.0\LoanManagementSystem.Domain.dll
+C:\Users\ITSADT30\Documents\folder\LMS\LoanManagementSystem.Domain\obj\Debug\net9.0\refint\LoanManagementSystem.Domain.dll
+C:\Users\ITSADT30\Documents\folder\LMS\LoanManagementSystem.Domain\obj\Debug\net9.0\LoanManagementSystem.Domain.pdb
+C:\Users\ITSADT30\Documents\folder\LMS\LoanManagementSystem.Domain\obj\Debug\net9.0\ref\LoanManagementSystem.Domain.dll
