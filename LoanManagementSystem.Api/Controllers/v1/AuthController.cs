@@ -121,4 +121,27 @@ public async Task<IActionResult> ResetPassword([FromBody] ResetPasswordRequest r
     }
 }
 
+    [HttpPost("logout")]
+    public async Task<IActionResult> Logout()
+    {
+        try
+        {
+            var email = User.FindFirst(System.Security.Claims.ClaimTypes.Email)?.Value 
+                        ?? User.Identity?.Name;
+
+            if (string.IsNullOrEmpty(email))
+            {
+                return BadRequest(new ApiResponse<string>(false, null, "Unable to extract identity context from session."));
+            }
+            
+            await auditService.LogSecurityActionAsync(email, true, "Manual Session Invalidation");
+
+            return Ok(new ApiResponse<string>(true, "Token dropped", "Logout logged successfully. Please clear client-side token caches."));
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, new ApiResponse<string>(false, null, $"Logout Invalidation Error: {ex.Message}"));
+        }
+    }
+
 }
