@@ -24,6 +24,8 @@ public class ApplicationDbContext : DbContext
     public DbSet<Payment> Payments => Set<Payment>();
     public DbSet<ActivityLog> ActivityLogs => Set<ActivityLog>();
     public DbSet<UserLoginLog> UserLoginLogs => Set<UserLoginLog>();
+    public DbSet<UserSecurityLog> UserSecurityLogs { get; set; }
+    
     public DbSet<User> Users => Set<User>();
     public DbSet<Role> Roles => Set<Role>();
 

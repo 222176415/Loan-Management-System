@@ -63,4 +63,22 @@ public class AuditService(
             .OrderByDescending(x => x.Timestamp)
             .ToListAsync();
     }
+    public async Task LogSecurityActionAsync(string email, bool success, string? failureReason = null)
+    {
+        var contextInfo = httpContextAccessor.HttpContext;
+
+        var log = new UserSecurityLog
+        {
+            UserEmail = email,
+            IsSuccess = success,
+            FailureReason = failureReason,
+            Timestamp = DateTime.UtcNow,
+            IpAddress = contextInfo?.Connection?.RemoteIpAddress?.ToString() ?? "0.0.0.0",
+            UserAgent = contextInfo?.Request.Headers["User-Agent"].ToString() ?? "Unknown"
+        };
+
+        context.UserSecurityLogs.Add(log);
+        await context.SaveChangesAsync();
+    }
+
 }

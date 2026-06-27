@@ -9,4 +9,5 @@ public interface IAuditService
     
     Task<IEnumerable<ActivityLog>> GetActivityLogsAsync();
     Task<IEnumerable<UserLoginLog>> GetLoginLogsAsync();
+    Task LogSecurityActionAsync(string email, bool success, string? failureReason = null);
 }
