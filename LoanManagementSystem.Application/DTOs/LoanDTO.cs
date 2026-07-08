@@ -3,9 +3,19 @@
 
 
 public record CreateLoanRequest(
-    int ClientId,
+    // Core Financial Metrics
     decimal PrincipalAmount,
-    DateTime DueDate
+    DateTime DueDate,
+
+    // Client Onboarding Footprint Identity
+    string Email,
+    string FirstName,
+    string Surname,
+    string? PhoneNumber = null,
+    string? Address = null,
+
+    // Optional legacy reference property for localized client matching
+    int? ClientId = null
 );
 
 public record LoanResponse(
@@ -20,7 +30,7 @@ public record LoanResponse(
 public record ClientResponse(
     int Id,
     string FirstName,
-    string LastName,
+    string Surname,
     string Email,
     string PhoneNumber,
     string Address
@@ -29,7 +39,7 @@ public record ClientResponse(
 
 public record CreateClientRequest(
     string FirstName, 
-    string LastName, 
+    string Surname, 
     string Email, 
     string PhoneNumber, 
     string Address

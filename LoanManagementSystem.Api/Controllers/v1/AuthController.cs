@@ -24,6 +24,8 @@ public class AuthController(
     {
         try
         {
+            var ipAddress = HttpContext.Connection.RemoteIpAddress?.ToString() ?? "127.0.0.1";
+            var userAgent = Request.Headers["User-Agent"].ToString() ?? "Unknown Client";
             
             var user = await context.Users
                 .IgnoreQueryFilters() 
@@ -33,22 +35,49 @@ public class AuthController(
             if (user == null || !PasswordHasher.VerifyPassword(request.Password, user.PasswordHash))
             {
                 await auditService.LogLoginAsync(request.Email, false, "Invalid credentials");
+                var failureLog = new UserLoginLog
+                {
+                    UserEmail = request.Email ?? "unknown_operator",
+                    IpAddress = ipAddress,
+                    UserAgent = userAgent,
+                    IsSuccess = false,
+                    FailureReason = user == null ? "Account footprint does not exist" : "Invalid credentials supplied",
+                    Timestamp = DateTime.UtcNow
+                };
+
+                context.UserLoginLogs.Add(failureLog);
+                await context.SaveChangesAsync();
                 return Unauthorized(new ApiResponse<string>(false, null, "Invalid email or password."));
             }
 
             if (!user.IsActive)
             {
                 await auditService.LogLoginAsync(request.Email, false, "Account deactivated");
+                var suspendedLog = new UserLoginLog
+                {
+                    UserEmail = user.Email,
+                    IpAddress = ipAddress,
+                    UserAgent = userAgent,
+                    IsSuccess = false,
+                    FailureReason = "Account suspended Login Attempt",
+                    Timestamp = DateTime.UtcNow
+                };
+
+                context.UserLoginLogs.Add(suspendedLog);
+                await context.SaveChangesAsync();
                 return BadRequest(new ApiResponse<string>(false, null, "Your account is deactivated."));
             }
 
           
             var token = GenerateJwtToken(user);
-
-        
+            var orgName = await context.Organizations
+                .IgnoreQueryFilters() 
+                .Where(u => u.Id == user.OrganizationId )
+                .Select(u => u.Name)
+                .FirstOrDefaultAsync() ?? "Unknown Organization";
             await auditService.LogLoginAsync(request.Email, true);
 
-            var response = new AuthResponse(token, user.Email, user.OrganizationId);
+            var response = new AuthResponse(token, user.Email, user.OrganizationId,orgName );
             return Ok(new ApiResponse<AuthResponse>(true, response, "Login successful"));
         }
         catch (Exception ex)
@@ -136,7 +165,7 @@ public async Task<IActionResult> ResetPassword([FromBody] ResetPasswordRequest r
             
             await auditService.LogSecurityActionAsync(email, true, "Manual Session Invalidation");
 
-            return Ok(new ApiResponse<string>(true, "Token dropped", "Logout logged successfully. Please clear client-side token caches."));
+            return Ok(new ApiResponse<string>(true, "Token dropped", "Logout logged successfully. "));
         }
         catch (Exception ex)
         {

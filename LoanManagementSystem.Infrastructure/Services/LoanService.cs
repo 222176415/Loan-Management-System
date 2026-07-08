@@ -8,47 +8,80 @@ namespace LoanManagementSystem.Infrastructure.Services;
 using Microsoft.EntityFrameworkCore;
 public class LoanService(ApplicationDbContext context, IAuditService auditService)
 {
-    public async Task<Loan> CreateLoanAsync(CreateLoanRequest request, int orgId)
-    //check for other Pending loans or overdue
-    {  await ValidateClientLoanStatusAsync(request.ClientId);
-        using var transaction = await context.Database.BeginTransactionAsync();
-        try
-        {
-        
-            var org = await context.Organizations.FindAsync(orgId) 
-                      ?? throw new Exception("Organization not found.");
+   public async Task<Loan> CreateLoanAsync(CreateLoanRequest request, int orgId)
+{
+    using var transaction = await context.Database.BeginTransactionAsync();
+    try
+    {
+        // 1. Resolve client profile context using the unique email identifier within the tenant scope
+        var client = await context.Clients
+            .FirstOrDefaultAsync(c => c.Email == request.Email && c.OrganizationId == orgId && !c.IsDeleted);
 
-            var loan = new Loan
+        if (client == null)
+        {
+            // 🟢 ELSE ROUTE: Client does not exist. Provision profile first and skip verification checks.
+            client = new Client
             {
                 OrganizationId = orgId,
-                ClientId = request.ClientId,
-                PrincipalAmount = request.PrincipalAmount,
-                InterestRate = org.DefaultInterestRate, 
-                VatRate = org.VatRate,                
-                TotalAmountDue = request.PrincipalAmount + (request.PrincipalAmount * (org.DefaultInterestRate / 100)),
-                IssueDate = DateTime.UtcNow,
-                DueDate = request.DueDate,
-                Status = Domain.Enums.LoanStatus.Active
+                FirstName = request.FirstName,
+                Surname = request.Surname,
+                Email = request.Email,
+                PhoneNumber = request.PhoneNumber,
+                Address = request.Address,
+                IsDeleted = false
             };
 
-            context.Loans.Add(loan);
-            await context.SaveChangesAsync();
-            
-            string description = $"New {loan.Status} loan created for ClientID: {loan.ClientId}. " +
-                                 $"Principal: {loan.PrincipalAmount}, Interest: {loan.InterestRate}%, " +
-                                 $"Total Due: {loan.TotalAmountDue}, Due Date: {loan.DueDate:yyyy-MM-dd}";
+            context.Clients.Add(client);
+            await context.SaveChangesAsync(); // Flushes changes to database to generate client.Id
 
-            await auditService.LogActivityAsync("CREATE", "Loan", loan.Id.ToString(), newValue: description);
-
-            await transaction.CommitAsync();
-            return loan;
+            // Log client profile creation to your live telemetry audit ledger
+            string clientDescription = $"New client registered via loan pipeline: {client.FirstName} {client.Surname} (Email: {client.Email}) under OrganizationID: {orgId}.";
+            await auditService.LogActivityAsync("CREATE", "Client", client.Id.ToString(), newValue: clientDescription);
         }
-        catch
+        else
         {
-            await transaction.RollbackAsync();
-            throw;
+            // 🔴 IF ROUTE: Client found. Run explicit perimeter state check for pending or overdue debt clusters.
+            await ValidateClientLoanStatusAsync(client.Id);
         }
+
+        // 2. Resolve Organization master default balance metrics
+        var org = await context.Organizations.FindAsync(orgId) 
+                  ?? throw new Exception("Organization not found.");
+
+        // 3. Instantiate the structural Loan Entity context linked to the resolved/generated Client ID
+        var loan = new Loan
+        {
+            OrganizationId = orgId,
+            ClientId = client.Id, 
+            PrincipalAmount = request.PrincipalAmount,
+            InterestRate = org.DefaultInterestRate, 
+            VatRate = org.VatRate,                
+            TotalAmountDue = request.PrincipalAmount + (request.PrincipalAmount * (org.DefaultInterestRate / 100)),
+            IssueDate = DateTime.UtcNow,
+            DueDate = request.DueDate,
+            Status = Domain.Enums.LoanStatus.Active
+        };
+
+        context.Loans.Add(loan);
+        await context.SaveChangesAsync();
+        
+        // 4. Fire operational activity telemetry update parameters
+        string loanDescription = $"New {loan.Status} loan created for ClientID: {loan.ClientId}. " +
+                                 $"Principal: R {loan.PrincipalAmount:N2}, Interest: {loan.InterestRate}%, " +
+                                 $"Total Due: R {loan.TotalAmountDue:N2}, Due Date: {loan.DueDate:yyyy-MM-dd}";
+
+        await auditService.LogActivityAsync("CREATE", "Loan", loan.Id.ToString(), newValue: loanDescription);
+
+        // 5. Commit atomic modifications together safely inside the SQL perimeter transaction
+        await transaction.CommitAsync();
+        return loan;
     }
+    catch
+    {
+        await transaction.RollbackAsync();
+        throw;
+    }
+}
     
     public async Task<IEnumerable<Loan>> GetOrganizationLoansAsync()
     {

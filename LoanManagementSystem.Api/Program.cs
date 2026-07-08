@@ -5,11 +5,13 @@ using LoanManagementSystem.Infrastructure.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using LoanManagementSystem.Application.DTOs;
 using LoanManagementSystem.Infrastructure.Hubs;
 using LoanManagementSystem.Infrastructure.Workers;
 using Scalar.AspNetCore;
+using LoanManagementSystem.Api.Controllers.Hubs;
 using Microsoft.OpenApi.Models;
-//using Microsoft.AspNetCore.OpenApi;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // 1. Database & Infrastructure
@@ -26,7 +28,7 @@ builder.Services.AddScoped<UserService>();
 builder.Services.AddScoped<RoleService>();
 builder.Services.AddScoped<OrganizationService>();
 builder.Services.AddScoped<PaymentService>();
-
+builder.Services.AddScoped<ClientService>();
 // 3. SignalR & Modern OpenAPI
 builder.Services.AddSignalR();
 //builder.Services.AddOpenApi(); 
@@ -96,7 +98,8 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 builder.Services.AddAuthorization();
 builder.Services.AddHostedService<ChronosWorker>();
 builder.Services.AddScoped<IExcelService, ExcelService>();
-
+builder.Services.AddScoped<IClientService, ClientService>();
+builder.Services.AddScoped<IAnalyticsService, AnalyticsService>();
 // 5. CORS
 builder.Services.AddCors(options =>
 {
