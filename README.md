@@ -98,6 +98,7 @@ docker-compose up --build
 ---
 
 ## 📡 API Endpoint Index
+##NOTE!!!:Latest API full documentation is on docs/v1.json
 
 ### Auth Routing
 - `POST /api/auth/login` - Authenticates administrative or officer profiles. Returns signature JWT Bearer data token.
