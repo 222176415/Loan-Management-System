@@ -1,0 +1,65 @@
+﻿# ==========================================
+# .NET Build & Compilation Outputs (All Projects)
+# ==========================================
+# Ignores bin and obj across Domain, Application, Infrastructure, & API
+**/[Bb]in/
+**/[Oo]bj/
+**/[Ll]og/
+**/[Ll]ogs/
+build/
+dist/
+
+# ==========================================
+# Database & EF Core Artifacts
+# ==========================================
+# Local SQLite/Dev Databases created by Infrastructure layer
+*.db
+*.db-shm
+*.db-wal
+*.mdf
+*.ldf
+
+# ==========================================
+# Environment & Configuration Secrets
+# ==========================================
+# Keep secrets out of Infrastructure/API layers
+appsettings.Development.json
+appsettings.Local.json
+*.env
+*.env.local
+*.env.*.local
+
+# ==========================================
+# IDE & Tooling Settings
+# ==========================================
+# Visual Studio
+.vs/
+*.user
+*.userosscache
+*.sln.docstates
+
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+# ==========================================
+# Packages & Dependencies
+# ==========================================
+*.nupkg
+**/packages/*
+!**/packages/build/
+*.nuget.props
+*.nuget.targets
+
+# ==========================================
+# OS Generated Files
+# ==========================================
+.DS_Store
+Thumbs.db
