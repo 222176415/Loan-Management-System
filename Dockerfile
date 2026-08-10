@@ -1,10 +1,10 @@
-# 1. Base Image for running the app
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
+# 1. Base Image for running the app (.NET 9)
+FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS base
 WORKDIR /app
 EXPOSE 8080
 
-# 2. SDK Image for building the code
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+# 2. SDK Image for building the code (.NET 9)
+FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 WORKDIR /src
 
 # Copy csproj files and restore distinct layers for caching
