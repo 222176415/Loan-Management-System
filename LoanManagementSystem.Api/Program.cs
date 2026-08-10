@@ -109,7 +109,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowedCorsOrigins", policy =>
     {
         /*policy.WithOrigins("http://localhost:3000") */
-        policy.WithOrigins("https://loanmanagementsystem-eta.vercel.app/")
+        policy.WithOrigins("https://loanmanagementsystem-eta.vercel.app") 
               .AllowAnyMethod()
               .AllowAnyHeader()
               .AllowCredentials(); 
@@ -121,11 +121,11 @@ builder.Services.AddControllers();
 var app = builder.Build();
 
 // 6. Middleware Pipeline
-if (app.Environment.IsDevelopment())
-{
+// if (app.Environment.IsDevelopment())
+// {
     app.MapOpenApi(); 
     app.MapScalarApiReference(); 
-}
+// }
 
 app.UseHttpsRedirection();
 app.UseCors("AllowedCorsOrigins");
