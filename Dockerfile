@@ -1,14 +1,13 @@
 # 1. Base Image for running the app
-# FROM ://microsoft.com AS base
-# WORKDIR /app
-#  EXPOSE 8080
-# EXPOSE 8081
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
+WORKDIR /app
+EXPOSE 8080
 
 # 2. SDK Image for building the code
-FROM ://microsoft.com AS build
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
-# Copy csproj files and restore as distinct layers (Optimizes build speed)
+# Copy csproj files and restore distinct layers for caching
 COPY ["LoanManagementSystem.Api/LoanManagementSystem.Api.csproj", "LoanManagementSystem.Api/"]
 COPY ["LoanManagementSystem.Infrastructure/LoanManagementSystem.Infrastructure.csproj", "LoanManagementSystem.Infrastructure/"]
 COPY ["LoanManagementSystem.Application/LoanManagementSystem.Application.csproj", "LoanManagementSystem.Application/"]
@@ -16,7 +15,7 @@ COPY ["LoanManagementSystem.Domain/LoanManagementSystem.Domain.csproj", "LoanMan
 
 RUN dotnet restore "LoanManagementSystem.Api/LoanManagementSystem.Api.csproj"
 
-# Copy & build
+# Copy full source code and build
 COPY . .
 WORKDIR "/src/LoanManagementSystem.Api"
 RUN dotnet build "LoanManagementSystem.Api.csproj" -c Release -o /app/build
