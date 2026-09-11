@@ -20,72 +20,92 @@ public class AuthController(
     IAuditService auditService) : ControllerBase
 {
     [HttpPost("login")]
-    public async Task<IActionResult> Login([FromBody] LoginRequest request)
+   public async Task<IActionResult> Login([FromBody] LoginRequest request)
+{
+    try
     {
-        try
+        var ipAddress = HttpContext.Connection.RemoteIpAddress?.ToString() ?? "127.0.0.1";
+        var userAgent = Request.Headers["User-Agent"].ToString() ?? "Unknown Client";
+        
+ 
+        var user = await context.Users
+            .IgnoreQueryFilters() 
+            .Include(u => u.Role) // Eagerly load Role entity
+            .FirstOrDefaultAsync(u => u.Email == request.Email);
+
+        if (user == null || !PasswordHasher.VerifyPassword(request.Password, user.PasswordHash))
         {
-            var ipAddress = HttpContext.Connection.RemoteIpAddress?.ToString() ?? "127.0.0.1";
-            var userAgent = Request.Headers["User-Agent"].ToString() ?? "Unknown Client";
-            
-            var user = await context.Users
-                .IgnoreQueryFilters() 
-                .FirstOrDefaultAsync(u => u.Email == request.Email);
-
-         
-            if (user == null || !PasswordHasher.VerifyPassword(request.Password, user.PasswordHash))
+            await auditService.LogLoginAsync(request.Email, false, "Invalid credentials");
+            var failureLog = new UserLoginLog
             {
-                await auditService.LogLoginAsync(request.Email, false, "Invalid credentials");
-                var failureLog = new UserLoginLog
-                {
-                    UserEmail = request.Email ?? "unknown_operator",
-                    IpAddress = ipAddress,
-                    UserAgent = userAgent,
-                    IsSuccess = false,
-                    FailureReason = user == null ? "Account footprint does not exist" : "Invalid credentials supplied",
-                    Timestamp = DateTime.UtcNow
-                };
+                UserEmail = request.Email ?? "unknown_operator",
+                IpAddress = ipAddress,
+                UserAgent = userAgent,
+                IsSuccess = false,
+                FailureReason = user == null ? "Account footprint does not exist" : "Invalid credentials supplied",
+                Timestamp = DateTime.UtcNow
+            };
 
-                context.UserLoginLogs.Add(failureLog);
-                await context.SaveChangesAsync();
-                return Unauthorized(new ApiResponse<string>(false, null, "Invalid email or password."));
-            }
-
-            if (!user.IsActive)
-            {
-                await auditService.LogLoginAsync(request.Email, false, "Account deactivated");
-                var suspendedLog = new UserLoginLog
-                {
-                    UserEmail = user.Email,
-                    IpAddress = ipAddress,
-                    UserAgent = userAgent,
-                    IsSuccess = false,
-                    FailureReason = "Account suspended Login Attempt",
-                    Timestamp = DateTime.UtcNow
-                };
-
-                context.UserLoginLogs.Add(suspendedLog);
-                await context.SaveChangesAsync();
-                return BadRequest(new ApiResponse<string>(false, null, "Your account is deactivated."));
-            }
-
-          
-            var token = GenerateJwtToken(user);
-            var orgName = await context.Organizations
-                .IgnoreQueryFilters() 
-                .Where(u => u.Id == user.OrganizationId )
-                .Select(u => u.Name)
-                .FirstOrDefaultAsync() ?? "Unknown Organization";
-            await auditService.LogLoginAsync(request.Email, true);
-
-            var response = new AuthResponse(token, user.Email, user.OrganizationId,orgName );
-            return Ok(new ApiResponse<AuthResponse>(true, response, "Login successful"));
+            context.UserLoginLogs.Add(failureLog);
+            await context.SaveChangesAsync();
+            return Unauthorized(new ApiResponse<string>(false, null, "Invalid email or password."));
         }
-        catch (Exception ex)
+
+        if (!user.IsActive)
         {
-            return StatusCode(500, new ApiResponse<string>(false, null, $"Login Error: {ex.Message}"));
+            await auditService.LogLoginAsync(request.Email, false, "Account deactivated");
+            var suspendedLog = new UserLoginLog
+            {
+                UserEmail = user.Email,
+                IpAddress = ipAddress,
+                UserAgent = userAgent,
+                IsSuccess = false,
+                FailureReason = "Account suspended Login Attempt",
+                Timestamp = DateTime.UtcNow
+            };
+
+            context.UserLoginLogs.Add(suspendedLog);
+            await context.SaveChangesAsync();
+            return BadRequest(new ApiResponse<string>(false, null, "Your account is deactivated."));
         }
+
+        var token = GenerateJwtToken(user);
+        
+        var orgName = await context.Organizations
+            .IgnoreQueryFilters() 
+            .Where(u => u.Id == user.OrganizationId)
+            .Select(u => u.Name)
+            .FirstOrDefaultAsync() ?? "Unknown Organization";
+
+        // Resolve Role Name (Fall back to direct lookup if user.Role navigation property is not configured)
+        string roleName = user.Role?.Name;
+        if (string.IsNullOrEmpty(roleName))
+        {
+            roleName = await context.Roles
+                .Where(r => r.Id == user.RoleId)
+                .Select(r => r.Name)
+                .FirstOrDefaultAsync() ?? "User";
+        }
+
+        await auditService.LogLoginAsync(request.Email, true);
+
+  
+        var response = new AuthResponse(
+            Token: token,
+            Email: user.Email,
+            OrganizationId: user.OrganizationId,
+            OrganizationName: orgName,
+            Role: roleName,
+            FullNames: user.FullName 
+        );
+
+        return Ok(new ApiResponse<AuthResponse>(true, response, "Login successful"));
     }
-
+    catch (Exception ex)
+    {
+        return StatusCode(500, new ApiResponse<string>(false, null, $"Login Error: {ex.Message}"));
+    }
+}
     private string GenerateJwtToken(User user)
     {
         var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config["Jwt:Key"]!));

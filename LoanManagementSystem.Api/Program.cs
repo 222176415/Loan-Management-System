@@ -103,6 +103,15 @@ builder.Services.AddHostedService<ChronosWorker>();
 builder.Services.AddScoped<IExcelService, ExcelService>();
 builder.Services.AddScoped<IClientService, ClientService>();
 builder.Services.AddScoped<IAnalyticsService, AnalyticsService>();
+builder.Services.AddScoped<ICopilotService, CopilotService>();
+builder.Services.AddScoped<ISqlGuardrailService, SqlGuardrailService>();
+builder.Services.AddScoped<ICopilotService, CopilotService>();
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        // Permits camelCase JSON payload deserialization to PascalCase C# models
+        options.JsonSerializerOptions.PropertyNamingPolicy = System.Text.Json.JsonNamingPolicy.CamelCase;
+    });
 // 5. CORS
 builder.Services.AddCors(options =>
 {
