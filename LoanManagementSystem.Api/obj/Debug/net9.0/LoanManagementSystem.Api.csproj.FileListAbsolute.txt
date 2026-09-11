@@ -166,15 +166,6 @@ C:\Users\ITSADT30\Documents\folder\LMS\LoanManagementSystem.Api\bin\Debug\net9.0
 C:\Users\ITSADT30\Documents\folder\LMS\LoanManagementSystem.Api\bin\Debug\net9.0\RBush.dll
 C:\Users\ITSADT30\Documents\folder\LMS\LoanManagementSystem.Api\bin\Debug\net9.0\SixLabors.Fonts.dll
 C:\Users\ITSADT30\Documents\folder\LMS\LoanManagementSystem.Api\bin\Debug\net9.0\System.IO.Packaging.dll
-C:\Users\shasha pro max\Documents\GitHub\Loan-Management-System\LoanManagementSystem.Api\obj\Debug\net9.0\LoanManagementSystem.Api.csproj.AssemblyReference.cache
-C:\Users\shasha pro max\Documents\GitHub\Loan-Management-System\LoanManagementSystem.Api\obj\Debug\net9.0\rpswa.dswa.cache.json
-C:\Users\shasha pro max\Documents\GitHub\Loan-Management-System\LoanManagementSystem.Api\obj\Debug\net9.0\LoanManagementSystem.Api.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\shasha pro max\Documents\GitHub\Loan-Management-System\LoanManagementSystem.Api\obj\Debug\net9.0\LoanManagementSystem.Api.AssemblyInfoInputs.cache
-C:\Users\shasha pro max\Documents\GitHub\Loan-Management-System\LoanManagementSystem.Api\obj\Debug\net9.0\LoanManagementSystem.Api.AssemblyInfo.cs
-C:\Users\shasha pro max\Documents\GitHub\Loan-Management-System\LoanManagementSystem.Api\obj\Debug\net9.0\LoanManagementSystem.Api.csproj.CoreCompileInputs.cache
-C:\Users\shasha pro max\Documents\GitHub\Loan-Management-System\LoanManagementSystem.Api\obj\Debug\net9.0\LoanManagementSystem.Api.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\shasha pro max\Documents\GitHub\Loan-Management-System\LoanManagementSystem.Api\obj\Debug\net9.0\LoanManagementSystem.Api.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\shasha pro max\Documents\GitHub\Loan-Management-System\LoanManagementSystem.Api\obj\Debug\net9.0\LoanManagementSystem.Api.sourcelink.json
 C:\Users\shasha pro max\Documents\GitHub\Loan-Management-System\LoanManagementSystem.Api\bin\Debug\net9.0\appsettings.Development.json
 C:\Users\shasha pro max\Documents\GitHub\Loan-Management-System\LoanManagementSystem.Api\bin\Debug\net9.0\appsettings.json
 C:\Users\shasha pro max\Documents\GitHub\Loan-Management-System\LoanManagementSystem.Api\bin\Debug\net9.0\LoanManagementSystem.Api.staticwebassets.endpoints.json
@@ -325,6 +316,15 @@ C:\Users\shasha pro max\Documents\GitHub\Loan-Management-System\LoanManagementSy
 C:\Users\shasha pro max\Documents\GitHub\Loan-Management-System\LoanManagementSystem.Api\bin\Debug\net9.0\LoanManagementSystem.Infrastructure.pdb
 C:\Users\shasha pro max\Documents\GitHub\Loan-Management-System\LoanManagementSystem.Api\bin\Debug\net9.0\LoanManagementSystem.Application.pdb
 C:\Users\shasha pro max\Documents\GitHub\Loan-Management-System\LoanManagementSystem.Api\bin\Debug\net9.0\LoanManagementSystem.Domain.pdb
+C:\Users\shasha pro max\Documents\GitHub\Loan-Management-System\LoanManagementSystem.Api\obj\Debug\net9.0\LoanManagementSystem.Api.csproj.AssemblyReference.cache
+C:\Users\shasha pro max\Documents\GitHub\Loan-Management-System\LoanManagementSystem.Api\obj\Debug\net9.0\rpswa.dswa.cache.json
+C:\Users\shasha pro max\Documents\GitHub\Loan-Management-System\LoanManagementSystem.Api\obj\Debug\net9.0\LoanManagementSystem.Api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\shasha pro max\Documents\GitHub\Loan-Management-System\LoanManagementSystem.Api\obj\Debug\net9.0\LoanManagementSystem.Api.AssemblyInfoInputs.cache
+C:\Users\shasha pro max\Documents\GitHub\Loan-Management-System\LoanManagementSystem.Api\obj\Debug\net9.0\LoanManagementSystem.Api.AssemblyInfo.cs
+C:\Users\shasha pro max\Documents\GitHub\Loan-Management-System\LoanManagementSystem.Api\obj\Debug\net9.0\LoanManagementSystem.Api.csproj.CoreCompileInputs.cache
+C:\Users\shasha pro max\Documents\GitHub\Loan-Management-System\LoanManagementSystem.Api\obj\Debug\net9.0\LoanManagementSystem.Api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\shasha pro max\Documents\GitHub\Loan-Management-System\LoanManagementSystem.Api\obj\Debug\net9.0\LoanManagementSystem.Api.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\shasha pro max\Documents\GitHub\Loan-Management-System\LoanManagementSystem.Api\obj\Debug\net9.0\LoanManagementSystem.Api.sourcelink.json
 C:\Users\shasha pro max\Documents\GitHub\Loan-Management-System\LoanManagementSystem.Api\obj\Debug\net9.0\rjimswa.dswa.cache.json
 C:\Users\shasha pro max\Documents\GitHub\Loan-Management-System\LoanManagementSystem.Api\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
 C:\Users\shasha pro max\Documents\GitHub\Loan-Management-System\LoanManagementSystem.Api\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json

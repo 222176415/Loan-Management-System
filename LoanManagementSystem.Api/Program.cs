@@ -13,8 +13,8 @@ using LoanManagementSystem.Api.Controllers.Hubs;
 using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
-var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
-builder.WebHost.UseUrls($"http://*:{port}");
+/*var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
+builder.WebHost.UseUrls($"http://*:{port}");*/
 
 // 1. Database & Infrastructure
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
@@ -108,8 +108,8 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowedCorsOrigins", policy =>
     {
-        /*policy.WithOrigins("http://localhost:3000") */
-        policy.WithOrigins("https://loanmanagementsystem-eta.vercel.app") 
+        policy.WithOrigins("http://localhost:3000") 
+        /*policy.WithOrigins("https://loanmanagementsystem-eta.vercel.app") */
               .AllowAnyMethod()
               .AllowAnyHeader()
               .AllowCredentials(); 
